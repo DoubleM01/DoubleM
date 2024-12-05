@@ -7,6 +7,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="static/css/style.css">
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/showdown/dist/showdown.min.js"></script>
+
 
 </head>
 <body>
@@ -41,26 +43,28 @@
             const repoName = "Detection-of-spine-deformities-using-deep-learning-models-"; // Replace with the repository name
             const url = `https://raw.githubusercontent.com/DoubleM01/${repoName}/main/README.md`;
 
-            try {
-                // Fetch the README file
-                const response = await fetch(url);
-                if (!response.ok) throw new Error('README not found.');
+      
+    try {
+        // Fetch the README file
+        const response = await fetch(url);
+        if (!response.ok) throw new Error('README not found.');
 
-                // Get the Markdown content
-                const markdown = await response.text();
+        // Get the Markdown content
+        const markdown = await response.text();
 
-                // Convert Markdown to HTML using marked.js
-                const htmlContent = marked(markdown);
+        // Convert Markdown to HTML using Showdown
+        const converter = new showdown.Converter();
+        const htmlContent = converter.makeHtml(markdown);
 
-                // Display the content in the readme-container
-                document.getElementById('readme-content').innerHTML = htmlContent;
-            } catch (error) {
-                document.getElementById('readme-content').innerHTML = `<p>Error loading README: ${error.message}</p>`;
-            }
-        }
+        // Display the content in the readme-container
+        document.getElementById('readme-content').innerHTML = htmlContent;
+    } catch (error) {
+        document.getElementById('readme-content').innerHTML = `<p>Error loading README: ${error.message}</p>`;
+    }
+}
 
-        // Load README on page load
-        fetchReadme();
+// Load README on page load
+fetchReadme();
     </script>
 
     <!-- Include marked.js for Markdown rendering -->
