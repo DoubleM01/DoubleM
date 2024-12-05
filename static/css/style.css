@@ -51,9 +51,9 @@ header a {
 }
 
 .logo {
-    width: 60px; /* Adjust size of logo */
-    height: 60px;
-    border-radius: 50%; /* Makes the logo circular */
+    width: 100px; /* Adjust size of logo */
+    height: 100px;
+    border-radius: 80%; /* Makes the logo circular */
     margin-right: 1rem;
 }
 
