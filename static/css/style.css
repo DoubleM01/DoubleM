@@ -120,7 +120,7 @@ header {
     animation: fadeInUp 1.2s ease-in-out;
 }
 
-/* Projects Section */
+/* General Projects Section Styling */
 .projects-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -136,6 +136,7 @@ header {
     overflow: hidden;
     width: 100%;
     max-width: 350px;
+    text-align: center;
 }
 
 .project-card:hover {
@@ -147,10 +148,23 @@ header {
     width: 100%;
     height: 200px;
     object-fit: cover;
+    border-bottom: 2px solid #eaeaea;
+    transition: transform 0.3s ease;
 }
 
+.project-card:hover img {
+    transform: scale(1.1);
+}
+
+/* Project Content Styling */
 .project-content {
     padding: 1.5rem;
+}
+
+.project-content h3 {
+    margin: 0.5rem 0;
+    color: #0078d4;
+    font-weight: bold;
 }
 
 .project-buttons {
@@ -165,7 +179,6 @@ header {
     background: #0078d4;
     color: white;
     border-radius: 5px;
-    text-align: center;
     text-decoration: none;
     transition: background 0.3s ease, transform 0.3s ease;
 }
