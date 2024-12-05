@@ -13,14 +13,18 @@ h1, h2, h3 {
     color: #0078d4;
 }
 
+/* General link style */
 a {
     color: #0078d4;
-    text-decoration: none;
-    font-weight: 600;
-    transition: color 0.3s ease;
 }
-header a {
-    color: white; /* Ensures header links are white */
+
+/* Header-specific links */
+.header-link {
+    color: white;
+}
+
+.header-link:hover {
+    color: #ffcc00; /* Hover color for header links */
 }
 
 a:hover {
