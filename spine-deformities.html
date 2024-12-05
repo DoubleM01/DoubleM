@@ -23,20 +23,45 @@
     <!-- Project Details Section -->
     <section class="section">
         <h2>Project Details</h2>
-        <img src="static/images/project1.jpg" alt="Detection of Spine Deformities" style="width:100%; height:auto; margin-bottom: 1rem; border-radius: 8px;">
-        <p>
-            The Detection of Spine Deformities project leverages machine learning to diagnose lumbar spine deformities.
-            It uses tools like Python, Roboflow API, and OpenCV to process medical images and provide accurate predictions.
-        </p>
-        <p>
-            This project demonstrates the integration of advanced deep learning models with real-world applications in the medical field.
-        </p>
-        <a href="https://example.com/spine-demo" target="_blank" class="project-button">View Demo</a>
+        <div id="readme-content" class="readme-container">
+            <p>Loading README content...</p>
+        </div>
     </section>
 
     <!-- Footer -->
     <footer>
         <p>© 2024 Mahmoud Mohamed | Designed with ❤️</p>
     </footer>
+
+    <!-- Script to Fetch README -->
+    <script>
+        async function fetchReadme() {
+            const repoName = "Detection-of-spine-deformities-using-deep-learning-models-"; // Replace with the repository name
+            const url = `https://raw.githubusercontent.com/DoubleM01/${repoName}/main/README.md`;
+
+            try {
+                // Fetch the README file
+                const response = await fetch(url);
+                if (!response.ok) throw new Error('README not found.');
+
+                // Get the Markdown content
+                const markdown = await response.text();
+
+                // Convert Markdown to HTML using marked.js
+                const htmlContent = marked(markdown);
+
+                // Display the content in the readme-container
+                document.getElementById('readme-content').innerHTML = htmlContent;
+            } catch (error) {
+                document.getElementById('readme-content').innerHTML = `<p>Error loading README: ${error.message}</p>`;
+            }
+        }
+
+        // Load README on page load
+        fetchReadme();
+    </script>
+
+    <!-- Include marked.js for Markdown rendering -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </body>
 </html>

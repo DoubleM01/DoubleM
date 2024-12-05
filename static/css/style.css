@@ -221,3 +221,33 @@ footer {
         transform: translateY(0);
     }
 }
+
+/* Styling for README Content */
+.readme-container {
+    background: #f9f9f9;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    font-family: 'Roboto Mono', monospace;
+    line-height: 1.6;
+    margin-top: 1rem;
+}
+
+.readme-container h1, .readme-container h2, .readme-container h3 {
+    color: #0078d4;
+}
+
+.readme-container pre {
+    background: #282c34;
+    color: #ffffff;
+    padding: 1rem;
+    border-radius: 8px;
+    overflow-x: auto;
+}
+
+.readme-container code {
+    background: #f1f1f1;
+    padding: 0.2rem 0.4rem;
+    border-radius: 4px;
+    color: #d6336c;
+}
