@@ -56,8 +56,17 @@
         const converter = new showdown.Converter();
         const htmlContent = converter.makeHtml(markdown);
 
+       // Replace relative image paths with GitHub URLs
+       const imageBaseUrl = `https://raw.githubusercontent.com/DoubleM01/${repoName}/main/`;
+        const contentWithImages = htmlContent.replace(/src="([^"]+)"/g, (match, src) => {
+            if (!src.startsWith('http')) {
+                return `src="${imageBaseUrl}${src}"`;
+            }
+            return match;
+        });
+
         // Display the content in the readme-container
-        document.getElementById('readme-content').innerHTML = htmlContent;
+        document.getElementById('readme-content').innerHTML = contentWithImages;
     } catch (error) {
         document.getElementById('readme-content').innerHTML = `<p>Error loading README: ${error.message}</p>`;
     }
