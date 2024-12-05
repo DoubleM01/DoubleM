@@ -31,6 +31,10 @@ header {
     color: white; /* Text color */
     padding: 1.5rem 2rem; /* Padding for spacing */
 }
+header a {
+    color: inherit; /* Use the header's text color */
+}
+
 
 .header-container {
     display: flex;
