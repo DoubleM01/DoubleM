@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gait Detection</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="static/css/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <h1>Gait Detection</h1>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Project Details Section -->
+    <section class="section">
+        <h2>About the Project</h2>
+        <p>
+            The **Gait Detection** project focuses on analyzing walking patterns to distinguish between steady and unsteady gaits. 
+            It employs deep learning techniques and state-of-the-art key-point extraction algorithms such as YOLO7 for feature detection.
+        </p>
+        <p><strong>Supervised By:</strong> Shi Sho</p>
+        <p><strong>Collaborators:</strong> Mahmoud Mohamed (BUE), Zakary BELKACEM (ESIEE)</p>
+    </section>
+
+    <section class="section">
+        <h2>Technical Approach</h2>
+        <p>The project is structured into the following steps:</p>
+        <ul>
+            <li>**Step 1:** Data acquisition using video samples.</li>
+            <li>**Step 2:** Preprocessing datasets, including video sampling and image extraction.</li>
+            <li>**Step 3:** Applying YOLO7 to extract key points from video frames.</li>
+            <li>**Step 4:** Preprocessing the extracted data for model training.</li>
+            <li>**Step 5:** Training a deep learning model for gait classification.</li>
+            <li>**Step 6:** Evaluation and testing using metrics like accuracy and FPS (frames per second).</li>
+            <li>**Step 7:** Calculating Dynamic Time Warping (DTW) scores for advanced comparisons.</li>
+        </ul>
+    </section>
+
+    <section class="section">
+        <h2>Possible Unsteady Cases</h2>
+        <p>The project identifies the following unsteady gait types:</p>
+        <ul>
+            <li>Choreiform-Hyperkinetic</li>
+            <li>Diplegic-Cerebral Palsy-Spastic</li>
+            <li>Hemiplegia</li>
+            <li>Limping Gait</li>
+            <li>Myopathic-Waddling Gait</li>
+            <li>Neuropathic-Steppage Gait</li>
+            <li>Parkinsonian-Propulsive Gait (Parkinson’s Disease)</li>
+            <li>Sensory Ataxia (Stomping Gait)</li>
+        </ul>
+    </section>
+
+    <section class="section">
+        <h2>Results</h2>
+        <p>
+            The model achieved an **85% accuracy** for gait classification using YOLO7, outperforming previous implementations. 
+            Practical testing demonstrated smooth operation with the following benchmarks:
+        </p>
+        <ul>
+            <li>**Accuracy:** 85%</li>
+            <li>**FPS (GTX):** 5</li>
+            <li>**FPS (RTX):** >70</li>
+        </ul>
+        <p>Previous benchmarks with other methods (e.g., MediaPipe) achieved 84% accuracy with an FPS of 32.</p>
+    </section>
+
+    <section class="section">
+        <h2>Key Features</h2>
+        <p>The project integrates the following features:</p>
+        <ul>
+            <li>Advanced preprocessing using YOLO7 for key-point detection.</li>
+            <li>Dynamic Time Warping for comparative gait analysis.</li>
+            <li>High accuracy and robust evaluation metrics.</li>
+        </ul>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2024 Mahmoud Mohamed | Designed with ❤️</p>
+    </footer>
+</body>
+</html>
