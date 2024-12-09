@@ -8,98 +8,90 @@
     <link rel="stylesheet" href="static/css/style.css">
 </head>
 <body>
-    <!-- Header Section -->
-    <header>
-        <div class="header-container">
-            <h1>Mahmoud Mohamed</h1>
-            <p class="tagline">AI Engineer | Deep Learning Specialist</p>
-            <nav>
-                <ul class="nav-menu">
-                    <li><a href="#about">About Me</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Creative AI Engineer</h1>
+                <p>Building innovative solutions with Deep Learning & Artificial Intelligence.</p>
+                <div class="hero-buttons">
+                    <a href="#contact" class="button">Hire Me</a>
+                    <a href="static/files/Mahmoud_CV.pdf" class="button secondary">Download CV</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="static/images/hero-image.png" alt="Hero Illustration">
+            </div>
         </div>
-    </header>
+    </section>
 
     <!-- About Section -->
-    <section id="about" class="section">
-        <h2>About Me</h2>
-        <p>
-            I'm Mahmoud Mohamed, an AI Engineer with expertise in artificial intelligence, deep learning, and software engineering. 
-            I specialize in designing, developing, and deploying advanced machine learning models for real-world applications.
-        </p>
+    <section id="about" class="about-section">
+        <div class="container">
+            <h2>About Me</h2>
+            <p>
+                I am Mahmoud Mohamed, an experienced AI Engineer specializing in Deep Learning, Computer Vision, 
+                and AI-driven solutions. I combine creativity and technology to solve real-world problems, making
+                data-driven decisions accessible to everyone.
+            </p>
+        </div>
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="section">
-        <h2>Projects</h2>
-        <div class="projects-container">
-            <!-- Project 1 -->
-            <div class="project-card">
-                <img src="static/images/project1.jpg" alt="Detection of Spine Deformities">
-                <div class="project-content">
+    <section id="projects" class="projects-section">
+        <div class="container">
+            <h2>My Recent Works</h2>
+            <div class="projects-container">
+                <!-- Project 1 -->
+                <div class="project-card">
+                    <img src="static/images/project1.jpg" alt="Project 1">
                     <h3>Detection of Spine Deformities</h3>
-                    <p>A deep learning-based project diagnosing lumbar spine deformities using medical images.</p>
-                    <a href="spine-deformities.html" class="project-button">More Details</a>
+                    <p>A deep learning model to diagnose lumbar spine deformities with medical imaging.</p>
+                    <a href="spine-deformities.html" class="button">More Details</a>
                 </div>
-            </div>
 
-            <!-- Project 2 -->
-            <div class="project-card">
-                <img src="static/images/project2.jpg" alt="Virtual Fitting Room">
-                <div class="project-content">
+                <!-- Project 2 -->
+                <div class="project-card">
+                    <img src="static/images/project2.jpg" alt="Project 2">
                     <h3>Virtual Fitting Room</h3>
-                    <p>An AI-driven application creating 3D clothing previews to enhance virtual shopping experiences.</p>
-                    <a href="virtual-fitting-room.html" class="project-button">More Details</a>
+                    <p>An AI-driven 3D clothing preview application for virtual shopping.</p>
+                    <a href="virtual-fitting-room.html" class="button">More Details</a>
                 </div>
-            </div>
 
-            <!-- Project 3 -->
-            <div class="project-card">
-                <img src="static/images/project3.jpg" alt="Speed Sign Detection">
-                <div class="project-content">
+                <!-- Project 3 -->
+                <div class="project-card">
+                    <img src="static/images/project3.jpg" alt="Project 3">
                     <h3>Speed Sign Detection</h3>
-                    <p>A convolutional neural network for classifying speed limit signs for autonomous vehicles.</p>
-                    <a href="speed-sign-detection.html" class="project-button">More Details</a>
-                </div>
-            </div>
-
-            <!-- Project 4 -->
-            <div class="project-card">
-                <img src="static/images/project4.jpg" alt="Gait Detection">
-                <div class="project-content">
-                    <h3>Gait Detection</h3>
-                    <p>An analysis of walking patterns using YOLO7 for detecting unsteady gait types.</p>
-                    <a href="gait-detection.html" class="project-button">More Details</a>
-                </div>
-            </div>
-
-            <!-- Project 5 -->
-            <div class="project-card">
-                <img src="static/images/project5.jpg" alt="Find My Game (FMG)">
-                <div class="project-content">
-                    <h3>Find My Game (FMG)</h3>
-                    <p>A mobile app for finding the best game deals across various platforms like PC, Xbox, and PlayStation.</p>
-                    <a href="find-my-game.html" class="project-button">More Details</a>
+                    <p>A CNN-based model to classify speed signs for autonomous driving systems.</p>
+                    <a href="speed-sign-detection.html" class="button">More Details</a>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="section">
-        <h2>Contact</h2>
-        <p>Email: <a href="mailto:Mahmoud_2001M@outlook.com">Mahmoud_2001M@outlook.com</a></p>
-        <p>Phone: +20 127-958-0712 (Egypt) | +971 52-996-8954 (UAE)</p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/doublem70">Mahmoud Mohamed</a></p>
-        <p>GitHub: <a href="https://github.com/DoubleM01">DoubleM01</a></p>
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2>Got a project in mind?</h2>
+            <p>Let’s work together to build something amazing. Reach out to discuss your idea!</p>
+            <form action="#" method="post" class="contact-form">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+                <button type="submit" class="button">Send Message</button>
+            </form>
+        </div>
     </section>
 
-    <!-- Footer -->
-    <footer>
-        <p>© 2024 Mahmoud Mohamed | Designed with ❤️</p>
+    <!-- Footer Section -->
+    <footer class="footer-section">
+        <div class="container">
+            <p>© 2024 Mahmoud Mohamed | Designed with ❤️</p>
+            <div class="social-icons">
+                <a href="https://linkedin.com/in/doublem70">LinkedIn</a>
+                <a href="https://github.com/DoubleM01">GitHub</a>
+            </div>
+        </div>
     </footer>
 </body>
 </html>
