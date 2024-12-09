@@ -34,16 +34,16 @@ a:hover {
 /* Hero Section */
 .hero-section {
     display: flex;
-    align-items: center; /* Vertically align text and image */
+    align-items: flex-start; /* Align text and image to the top */
     justify-content: space-between; /* Push text and image to opposite sides */
-    height: 100vh; /* Full viewport height */
     padding: 2rem;
+    height: auto; /* Allow height to adjust based on content */
     background: linear-gradient(135deg, #1e1e1e, #282828); /* Gradient background */
 }
 
 .hero-content {
-    flex: 1; /* Allow text to take up half the width */
-    max-width: 45%; /* Prevent text from stretching too wide */
+    flex: 1; /* Allow text to take up a portion of the width */
+    max-width: 50%; /* Prevent text from stretching too wide */
     z-index: 2; /* Ensure text appears above other elements */
 }
 
@@ -51,6 +51,7 @@ a:hover {
     font-size: 3.5rem;
     margin-bottom: 1rem;
     line-height: 1.2; /* Adjust line spacing */
+    color: #00d4ff; /* Neon blue for heading */
 }
 
 .hero-content p {
@@ -86,44 +87,19 @@ a:hover {
 }
 
 .hero-image {
-    flex: 1; /* Allow image to take up the remaining width */
+    flex: 0 0 30%; /* Restrict image width to 30% of the container */
     display: flex;
     justify-content: flex-end; /* Align image to the far right */
-    align-items: center; /* Vertically center the image */
-    height: 100%;
-    padding-left: 2rem; /* Space between text and image */
+    align-items: flex-start; /* Align image with the top of the buttons */
+    height: auto; /* Maintain height based on content */
 }
 
 .hero-image img {
-    width: 80%; /* Adjust image width */
+    max-width: 100%; /* Fit the image within the container */
     height: auto; /* Maintain aspect ratio */
     object-fit: contain; /* Ensure the image scales properly */
-    border-radius: 10px;
+    border-radius: 10px; /* Add subtle rounded corners */
 }
-@media (max-width: 768px) {
-    .hero-section {
-        flex-direction: column; /* Stack text and image vertically */
-        height: auto; /* Allow section height to adjust to content */
-        text-align: center; /* Center-align text */
-        padding: 1rem;
-    }
-
-    .hero-content {
-        max-width: 100%; /* Allow text to take full width */
-        margin-bottom: 2rem; /* Add space below text */
-    }
-
-    .hero-image {
-        justify-content: center; /* Center the image */
-        padding-left: 0; /* Remove left padding */
-    }
-
-    .hero-image img {
-        width: 90%; /* Adjust image size for smaller screens */
-    }
-}
-
-
 
 /* Projects Section */
 .projects-section {
