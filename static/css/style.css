@@ -34,7 +34,7 @@ a:hover {
 /* Hero Section */
 .hero-section {
     display: flex;
-    align-items: center; /* Vertically center text and image */
+    align-items: center; /* Vertically align text and image */
     justify-content: space-between; /* Push text and image to opposite sides */
     height: 100vh; /* Full viewport height */
     padding: 2rem;
@@ -42,8 +42,8 @@ a:hover {
 }
 
 .hero-content {
-    flex: 1; /* Allow text to take up half the space */
-    max-width: 50%; /* Limit text area width */
+    flex: 1; /* Allow text to take up half the width */
+    max-width: 45%; /* Prevent text from stretching too wide */
     z-index: 2; /* Ensure text appears above other elements */
 }
 
@@ -86,40 +86,43 @@ a:hover {
 }
 
 .hero-image {
-    flex: 1; /* Allow image to take up half the space */
+    flex: 1; /* Allow image to take up the remaining width */
     display: flex;
     justify-content: flex-end; /* Align image to the far right */
-    height: 100%; /* Ensure image fills the height of the section */
-    overflow: hidden; /* Prevent overflow of the image */
+    align-items: center; /* Vertically center the image */
+    height: 100%;
+    padding-left: 2rem; /* Space between text and image */
 }
 
 .hero-image img {
-    width: 90%; /* Scale image to fit within the container */
+    width: 80%; /* Adjust image width */
     height: auto; /* Maintain aspect ratio */
-    object-fit: contain; /* Ensure image fits within the container */
-    border-radius: 10px; /* Add subtle rounding */
+    object-fit: contain; /* Ensure the image scales properly */
+    border-radius: 10px;
 }
 @media (max-width: 768px) {
     .hero-section {
         flex-direction: column; /* Stack text and image vertically */
-        height: auto; /* Allow the section to adapt to content */
-        text-align: center; /* Center-align the content */
+        height: auto; /* Allow section height to adjust to content */
+        text-align: center; /* Center-align text */
+        padding: 1rem;
     }
 
     .hero-content {
         max-width: 100%; /* Allow text to take full width */
-        margin-bottom: 2rem; /* Space between text and image */
+        margin-bottom: 2rem; /* Add space below text */
     }
 
     .hero-image {
         justify-content: center; /* Center the image */
+        padding-left: 0; /* Remove left padding */
     }
 
     .hero-image img {
-        width: 100%; /* Allow image to take full width */
-        height: auto;
+        width: 90%; /* Adjust image size for smaller screens */
     }
 }
+
 
 
 /* Projects Section */
