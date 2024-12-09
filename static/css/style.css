@@ -34,7 +34,6 @@ a:hover {
 /* Hero Section */
 .hero-section {
     display: flex;
-    flex-direction: row;
     align-items: center;
     justify-content: space-between;
     height: 100vh; /* Full viewport height */
@@ -46,7 +45,6 @@ a:hover {
     flex: 1;
     max-width: 50%; /* Text takes up 50% of the width */
     z-index: 2; /* Ensure text appears above the image */
-    margin-right: 2rem; /* Space between text and image */
 }
 
 .hero-content h1 {
@@ -56,7 +54,7 @@ a:hover {
 }
 
 .hero-content p {
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
     font-size: 1.2rem;
     color: #e0e0e0;
 }
@@ -88,43 +86,19 @@ a:hover {
 }
 
 .hero-image {
-    flex: 1;
+    flex: 1; /* Image takes up 50% of the width */
     display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%; /* Ensure image fills the height of the section */
-    max-width: 50%; /* Ensure the image is balanced */
-    overflow: hidden; /* Prevent overflowing of the image */
+    justify-content: flex-end; /* Align image to the right */
+    align-items: center; /* Align image vertically with buttons */
+    height: 100%;
+    padding-left: 2rem; /* Space between buttons and image */
 }
 
 .hero-image img {
-    width: 90%; /* Scale the image to fit within the space */
-    height: auto; /* Maintain aspect ratio */
-    object-fit: contain; /* Adjust image to fit nicely */
+    width: 60%; /* Scale the image down to fit within the layout */
+    height: auto;
+    object-fit: contain;
     border-radius: 10px;
-}
-
-@media (max-width: 768px) {
-    .hero-section {
-        flex-direction: column; /* Stack content vertically */
-        text-align: center;
-        padding: 1rem;
-        height: auto; /* Allow auto height for smaller devices */
-    }
-
-    .hero-content {
-        max-width: 100%;
-        margin: 0 0 2rem 0;
-    }
-
-    .hero-image {
-        max-width: 100%;
-    }
-
-    .hero-image img {
-        width: 100%;
-        height: auto;
-    }
 }
 
 /* About Section */
