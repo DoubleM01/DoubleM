@@ -34,6 +34,7 @@ a:hover {
 /* Hero Section */
 .hero-section {
     display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: space-between;
     height: 100vh; /* Full viewport height */
@@ -45,11 +46,13 @@ a:hover {
     flex: 1;
     max-width: 50%; /* Text takes up 50% of the width */
     z-index: 2; /* Ensure text appears above the image */
+    margin-right: 2rem; /* Space between text and image */
 }
 
 .hero-content h1 {
     font-size: 3.5rem;
     margin-bottom: 1rem;
+    line-height: 1.2; /* Improve text spacing */
 }
 
 .hero-content p {
@@ -61,6 +64,7 @@ a:hover {
 .hero-buttons {
     display: flex;
     gap: 1rem;
+    margin-top: 1rem;
 }
 
 .hero-buttons .button {
@@ -88,16 +92,39 @@ a:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    max-width: 50%;
     height: 100%; /* Ensure image fills the height of the section */
+    max-width: 50%; /* Ensure the image is balanced */
     overflow: hidden; /* Prevent overflowing of the image */
 }
 
 .hero-image img {
-    width: 100%; /* Image takes full width */
+    width: 90%; /* Scale the image to fit within the space */
     height: auto; /* Maintain aspect ratio */
-    object-fit: cover; /* Ensure image covers the space */
+    object-fit: contain; /* Adjust image to fit nicely */
     border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+    .hero-section {
+        flex-direction: column; /* Stack content vertically */
+        text-align: center;
+        padding: 1rem;
+        height: auto; /* Allow auto height for smaller devices */
+    }
+
+    .hero-content {
+        max-width: 100%;
+        margin: 0 0 2rem 0;
+    }
+
+    .hero-image {
+        max-width: 100%;
+    }
+
+    .hero-image img {
+        width: 100%;
+        height: auto;
+    }
 }
 
 /* About Section */
