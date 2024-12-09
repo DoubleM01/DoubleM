@@ -99,6 +99,27 @@ a:hover {
     object-fit: contain; /* Ensure image fits within the container */
     border-radius: 10px; /* Add subtle rounding */
 }
+@media (max-width: 768px) {
+    .hero-section {
+        flex-direction: column; /* Stack text and image vertically */
+        height: auto; /* Allow the section to adapt to content */
+        text-align: center; /* Center-align the content */
+    }
+
+    .hero-content {
+        max-width: 100%; /* Allow text to take full width */
+        margin-bottom: 2rem; /* Space between text and image */
+    }
+
+    .hero-image {
+        justify-content: center; /* Center the image */
+    }
+
+    .hero-image img {
+        width: 100%; /* Allow image to take full width */
+        height: auto;
+    }
+}
 
 
 /* Projects Section */
