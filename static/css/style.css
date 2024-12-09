@@ -34,23 +34,23 @@ a:hover {
 /* Hero Section */
 .hero-section {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    align-items: center; /* Vertically center text and image */
+    justify-content: space-between; /* Push text and image to opposite sides */
     height: 100vh; /* Full viewport height */
     padding: 2rem;
-    background: linear-gradient(135deg, #1e1e1e, #282828);
+    background: linear-gradient(135deg, #1e1e1e, #282828); /* Gradient background */
 }
 
 .hero-content {
-    flex: 1;
-    max-width: 50%; /* Text takes up 50% of the width */
-    z-index: 2; /* Ensure text appears above the image */
+    flex: 1; /* Allow text to take up half the space */
+    max-width: 50%; /* Limit text area width */
+    z-index: 2; /* Ensure text appears above other elements */
 }
 
 .hero-content h1 {
     font-size: 3.5rem;
     margin-bottom: 1rem;
-    line-height: 1.2; /* Improve text spacing */
+    line-height: 1.2; /* Adjust line spacing */
 }
 
 .hero-content p {
@@ -61,7 +61,7 @@ a:hover {
 
 .hero-buttons {
     display: flex;
-    gap: 1rem;
+    gap: 1rem; /* Space between buttons */
     margin-top: 1rem;
 }
 
@@ -86,38 +86,20 @@ a:hover {
 }
 
 .hero-image {
-    flex: 1; /* Image takes up 50% of the width */
+    flex: 1; /* Allow image to take up half the space */
     display: flex;
-    justify-content: flex-end; /* Align image to the right */
-    align-items: center; /* Align image vertically with buttons */
-    height: 100%;
-    padding-left: 2rem; /* Space between buttons and image */
+    justify-content: flex-end; /* Align image to the far right */
+    height: 100%; /* Ensure image fills the height of the section */
+    overflow: hidden; /* Prevent overflow of the image */
 }
 
 .hero-image img {
-    width: 60%; /* Scale the image down to fit within the layout */
-    height: auto;
-    object-fit: contain;
-    border-radius: 10px;
+    width: 90%; /* Scale image to fit within the container */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: contain; /* Ensure image fits within the container */
+    border-radius: 10px; /* Add subtle rounding */
 }
 
-/* About Section */
-.about-section {
-    padding: 2rem;
-    text-align: center;
-    background: #1e1e1e;
-}
-
-.about-section h2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-}
-
-.about-section p {
-    max-width: 800px;
-    margin: 0 auto;
-    font-size: 1.2rem;
-}
 
 /* Projects Section */
 .projects-section {
