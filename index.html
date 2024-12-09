@@ -1,34 +1,73 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mahmoud Mohamed</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="static/css/style.css">
-    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-</head>
 <body>
-    <!-- Include Hero Section -->
-    <?php include 'hero.html'; ?>
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Innovative AI Engineer</h1>
+                <p>Specializing in cutting-edge solutions with Deep Learning, Artificial Intelligence, and Computer Vision.</p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="button primary">Explore My Work</a>
+                    <a href="static/files/Mahmoud_CV.pdf" class="button secondary">Download CV</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="static/images/hero-image.png" alt="Hero Illustration">
+            </div>
+        </div>
+    </section>
 
-    <!-- Include About Section -->
-    <?php include 'about.html'; ?>
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <h2>About Me</h2>
+            <p>
+                I'm Mahmoud Mohamed, an experienced AI Engineer specializing in Deep Learning, Computer Vision, 
+                and AI-driven solutions. I bring a mix of creativity, technical expertise, and a passion for innovation 
+                to deliver exceptional results in the field of Artificial Intelligence.
+            </p>
+        </div>
+    </section>
 
-    <!-- Include Projects Section -->
-    <?php include 'projects.html'; ?>
+    <!-- Projects Section -->
+    <section id="projects" class="projects-section">
+        <div class="container">
+            <h2>Recent Projects</h2>
+            <div class="projects-container">
+                <div class="project-card">
+                    <img src="static/images/project1.jpg" alt="Detection of Spine Deformities">
+                    <div class="project-info">
+                        <h3>Detection of Spine Deformities</h3>
+                        <p>Developed a deep learning model for diagnosing spine deformities using medical imaging.</p>
+                        <a href="spine-deformities.html" class="button">More Details</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <!-- Include Contact Section -->
-    <?php include 'contact.html'; ?>
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2>Contact Me</h2>
+            <form action="#" method="post" class="contact-form">
+                <div class="form-group">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" name="email" placeholder="Your Email" required>
+                </div>
+                <div class="form-group">
+                    <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+                </div>
+                <button type="submit" class="button primary">Send Message</button>
+            </form>
+        </div>
+    </section>
 
-    <!-- Include Footer Section -->
-    <?php include 'footer.html'; ?>
+    <!-- Footer Section -->
+    <footer class="footer-section">
+        <div class="container">
+            <p>© 2024 Mahmoud Mohamed | All Rights Reserved</p>
+        </div>
+    </footer>
 </body>
-    <script>
-    AOS.init({
-        duration: 1200, // Animation duration (milliseconds)
-        once: true,     // Whether animation happens only once while scrolling
-    });
-</script>
-</html>
