@@ -6,64 +6,69 @@
     <title>Mahmoud Mohamed Portfolio</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="static/css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
 </head>
 <body>
     <!-- Hero Section -->
     <section id="hero" class="hero-section">
         <div class="container">
-            <div class="hero-content">
+            <div class="hero-content" data-aos="fade-up">
+                <img src="static/images/hero-logo.png" alt="DoubleM Logo" class="hero-logo">
                 <h1>Creative AI Engineer</h1>
-                <p>Building innovative solutions with Deep Learning & Artificial Intelligence.</p>
+                <p>Innovative solutions built with Artificial Intelligence and cutting-edge technology.</p>
                 <div class="hero-buttons">
-                    <a href="#contact" class="button">Hire Me</a>
+                    <a href="#projects" class="button primary">Explore My Work</a>
                     <a href="static/files/Mahmoud_CV.pdf" class="button secondary">Download CV</a>
                 </div>
-            </div>
-            <div class="hero-image">
-                <img src="static/images/hero-image.png" alt="Hero Illustration">
             </div>
         </div>
     </section>
 
     <!-- About Section -->
     <section id="about" class="about-section">
-        <div class="container">
+        <div class="container" data-aos="fade-right">
             <h2>About Me</h2>
             <p>
-                I am Mahmoud Mohamed, an experienced AI Engineer specializing in Deep Learning, Computer Vision, 
-                and AI-driven solutions. I combine creativity and technology to solve real-world problems, making
-                data-driven decisions accessible to everyone.
+                I'm Mahmoud Mohamed, an experienced AI Engineer specializing in Deep Learning, Computer Vision, 
+                and AI-driven solutions. I bring a mix of creativity, technical expertise, and a passion for innovation
+                to deliver exceptional results.
             </p>
         </div>
     </section>
 
     <!-- Projects Section -->
     <section id="projects" class="projects-section">
-        <div class="container">
+        <div class="container" data-aos="fade-up">
             <h2>My Recent Works</h2>
             <div class="projects-container">
                 <!-- Project 1 -->
-                <div class="project-card">
-                    <img src="static/images/project1.jpg" alt="Project 1">
-                    <h3>Detection of Spine Deformities</h3>
-                    <p>A deep learning model to diagnose lumbar spine deformities with medical imaging.</p>
-                    <a href="spine-deformities.html" class="button">More Details</a>
+                <div class="project-card" data-aos="flip-left">
+                    <img src="static/images/project1.jpg" alt="Detection of Spine Deformities">
+                    <div class="project-info">
+                        <h3>Detection of Spine Deformities</h3>
+                        <p>Diagnosing lumbar spine deformities with machine learning models.</p>
+                        <a href="spine-deformities.html" class="button">More Details</a>
+                    </div>
                 </div>
 
                 <!-- Project 2 -->
-                <div class="project-card">
-                    <img src="static/images/project2.jpg" alt="Project 2">
-                    <h3>Virtual Fitting Room</h3>
-                    <p>An AI-driven 3D clothing preview application for virtual shopping.</p>
-                    <a href="virtual-fitting-room.html" class="button">More Details</a>
+                <div class="project-card" data-aos="flip-left">
+                    <img src="static/images/project2.jpg" alt="Virtual Fitting Room">
+                    <div class="project-info">
+                        <h3>Virtual Fitting Room</h3>
+                        <p>AI-powered 3D clothing previews for virtual shopping experiences.</p>
+                        <a href="virtual-fitting-room.html" class="button">More Details</a>
+                    </div>
                 </div>
 
                 <!-- Project 3 -->
-                <div class="project-card">
-                    <img src="static/images/project3.jpg" alt="Project 3">
-                    <h3>Speed Sign Detection</h3>
-                    <p>A CNN-based model to classify speed signs for autonomous driving systems.</p>
-                    <a href="speed-sign-detection.html" class="button">More Details</a>
+                <div class="project-card" data-aos="flip-left">
+                    <img src="static/images/project3.jpg" alt="Speed Sign Detection">
+                    <div class="project-info">
+                        <h3>Speed Sign Detection</h3>
+                        <p>Classifying speed signs for autonomous vehicles using AI.</p>
+                        <a href="speed-sign-detection.html" class="button">More Details</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -71,13 +76,18 @@
 
     <!-- Contact Section -->
     <section id="contact" class="contact-section">
-        <div class="container">
-            <h2>Got a project in mind?</h2>
-            <p>Let’s work together to build something amazing. Reach out to discuss your idea!</p>
+        <div class="container" data-aos="fade-up">
+            <h2>Contact Me</h2>
             <form action="#" method="post" class="contact-form">
-                <input type="text" name="name" placeholder="Your Name" required>
-                <input type="email" name="email" placeholder="Your Email" required>
-                <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+                <div class="form-group">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" name="email" placeholder="Your Email" required>
+                </div>
+                <div class="form-group">
+                    <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+                </div>
                 <button type="submit" class="button">Send Message</button>
             </form>
         </div>
@@ -87,11 +97,12 @@
     <footer class="footer-section">
         <div class="container">
             <p>© 2024 Mahmoud Mohamed | Designed with ❤️</p>
-            <div class="social-icons">
-                <a href="https://linkedin.com/in/doublem70">LinkedIn</a>
-                <a href="https://github.com/DoubleM01">GitHub</a>
-            </div>
         </div>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 </html>
