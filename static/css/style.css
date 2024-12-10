@@ -71,7 +71,7 @@ a:hover {
 .hero-buttons {
     flex: 1; /* Take up half the available space */
     display: flex;
-    flex-direction: column; /* Stack buttons vertically */
+    flex-direction: row; /* Stack buttons vertically */
     gap: 1rem;
     justify-content: left;
     align-items: flex-start; /* Align buttons to the left */
