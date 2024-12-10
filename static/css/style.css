@@ -34,36 +34,46 @@ a:hover {
 /* Hero Section */
 .hero-section {
     display: flex;
-    align-items: flex-start; /* Align text and image to the top */
-    justify-content: space-between; /* Push text and image to opposite sides */
+    flex-direction: column; /* Stack text and buttons/image vertically */
+    align-items: center;
+    justify-content: center;
     padding: 2rem;
-    height: auto; /* Allow height to adjust based on content */
-    background: linear-gradient(135deg, #1e1e1e, #282828); /* Gradient background */
+    background: #121212; /* Dark theme */
+    height: 100vh; /* Full viewport height */
 }
 
 .hero-content {
-    flex: 1; /* Allow text to take up a portion of the width */
-    max-width: 50%; /* Prevent text from stretching too wide */
-    z-index: 2; /* Ensure text appears above other elements */
+    text-align: center; /* Center the text horizontally */
+    margin-bottom: 2rem; /* Add space below the text */
 }
 
 .hero-content h1 {
     font-size: 3.5rem;
     margin-bottom: 1rem;
-    line-height: 1.2; /* Adjust line spacing */
-    color: #00d4ff; /* Neon blue for heading */
+    color: #00d4ff;
 }
 
 .hero-content p {
-    margin-bottom: 1.5rem;
     font-size: 1.2rem;
     color: #e0e0e0;
 }
 
-.hero-buttons {
+/* Wrapper for Buttons and Image */
+.hero-wrapper {
     display: flex;
-    gap: 1rem; /* Space between buttons */
-    margin-top: 1rem;
+    align-items: center; /* Align buttons and image vertically */
+    justify-content: space-between; /* Push buttons to left and image to right */
+    width: 100%;
+    max-width: 1200px; /* Constrain max width for better design */
+}
+
+.hero-buttons {
+    flex: 1; /* Take up half the available space */
+    display: flex;
+    flex-direction: column; /* Stack buttons vertically */
+    gap: 1rem;
+    justify-content: center;
+    align-items: flex-start; /* Align buttons to the left */
 }
 
 .hero-buttons .button {
@@ -75,30 +85,55 @@ a:hover {
     transition: background 0.3s ease, transform 0.3s ease;
 }
 
-.hero-buttons .button:hover {
-    background: #006d99;
-    transform: translateY(-2px);
-}
-
 .hero-buttons .button.secondary {
     background: transparent;
     border: 2px solid #00d4ff;
     color: #00d4ff;
 }
 
+.hero-buttons .button:hover {
+    background: #006d99;
+    transform: translateY(-2px);
+}
+
+/* Hero Image */
 .hero-image {
-    flex: 0 0 30%; /* Restrict image width to 30% of the container */
+    flex: 1; /* Take up half the available space */
     display: flex;
-    justify-content: flex-end; /* Align image to the far right */
-    align-items: flex-start; /* Align image with the top of the buttons */
-    height: auto; /* Maintain height based on content */
+    justify-content: flex-end; /* Align image to the right */
+    align-items: center;
 }
 
 .hero-image img {
-    max-width: 100%; /* Fit the image within the container */
-    height: auto; /* Maintain aspect ratio */
-    object-fit: contain; /* Ensure the image scales properly */
-    border-radius: 10px; /* Add subtle rounded corners */
+    width: 90%; /* Adjust image size */
+    height: auto;
+    object-fit: contain; /* Ensure proper scaling */
+    border-radius: 10px; /* Add rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .hero-section {
+        height: auto; /* Let section height adjust to content */
+    }
+
+    .hero-wrapper {
+        flex-direction: column; /* Stack buttons and image vertically */
+        align-items: center;
+    }
+
+    .hero-buttons {
+        align-items: center; /* Center-align buttons */
+    }
+
+    .hero-image {
+        margin-top: 2rem; /* Add space above the image */
+    }
+
+    .hero-image img {
+        width: 80%; /* Resize image for smaller screens */
+    }
 }
 
 /* Projects Section */
