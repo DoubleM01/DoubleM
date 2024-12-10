@@ -39,11 +39,11 @@ a:hover {
     justify-content: left;
     padding: 2rem;
     background: #121212; /* Dark theme */
-    height: 100vh; /* Full viewport height */
+    height: auto; /* Full viewport height */
 }
 
 .hero-content {
-    text-align: center; /* Center the text horizontally */
+    text-align: left; /* Center the text horizontally */
     margin-bottom: 0; /* Add space below the text */
 }
 
@@ -101,7 +101,7 @@ a:hover {
     flex: 1; /* Take up half the available space */
     display: flex;
     justify-content: flex-end; /* Align image to the right */
-    align-items: center;
+    align-items: right;
 }
 
 .hero-image img {
