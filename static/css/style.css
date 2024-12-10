@@ -35,8 +35,8 @@ a:hover {
 .hero-section {
     display: flex;
     flex-direction: column; /* Stack text and buttons/image vertically */
-    align-items: center;
-    justify-content: center;
+    align-items: left;
+    justify-content: left;
     padding: 2rem;
     background: #121212; /* Dark theme */
     height: 100vh; /* Full viewport height */
