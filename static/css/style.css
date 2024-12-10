@@ -255,20 +255,38 @@ a:hover {
     background: #121212;
     text-align: center;
     color: #b0b0b0;
+    position: relative;
 }
 
 .footer-section p {
     margin: 0;
+    font-size: 0.9rem;
+}
+
+.social-links {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem; /* Space between logos */
 }
 
 .social-links a {
-    margin: 0 1rem;
-    color: #00d4ff;
-    font-weight: bold;
-    text-decoration: none;
-    transition: color 0.3s ease;
+    display: inline-block;
+    transition: transform 0.3s ease;
 }
 
 .social-links a:hover {
-    color: #ffffff;
+    transform: scale(1.1); /* Slight zoom effect on hover */
 }
+
+.social-icon {
+    width: 32px; /* Adjust size of the logos */
+    height: 32px;
+    filter: invert(100%); /* Makes logos white for dark backgrounds */
+    transition: filter 0.3s ease;
+}
+
+.social-links a:hover .social-icon {
+    filter: invert(70%) sepia(10%) saturate(300%) hue-rotate(200deg); /* Slight color tint on hover */
+}
+
