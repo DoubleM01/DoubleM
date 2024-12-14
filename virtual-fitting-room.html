@@ -3,59 +3,120 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Virtual Fitting Room Project</title>
+    <title>Virtual Fitting Room</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="static/css/style.css">
 </head>
 <body>
+    <!-- Header -->
     <header class="project-header">
         <h1>Virtual Fitting Room</h1>
-        <p>A Cutting-Edge Solution Bridging Technology and Fashion</p>
+        <p class="tagline">Revolutionizing Online Shopping with Advanced 3D Modeling and Simulation</p>
     </header>
 
-    <section class="project-details">
-        <h2>About the Project</h2>
+    <!-- Project Objective -->
+    <section class="project-section">
+        <h2>Objective</h2>
         <p>
-            The Virtual Fitting Room project integrates computer vision, machine learning, and 3D modeling to revolutionize online shopping. 
-            Customers can visualize how clothes fit and look on their virtual models by uploading a video, enhancing the shopping experience.
+            To create an advanced Virtual Fitting Room (VFR) that allows customers to visualize how clothing fits on their bodies 
+            by generating a 3D model based on video inputs. This aims to enhance the online shopping experience and address 
+            common issues like inaccurate fit, high return rates, and the inability to physically try on clothing.
         </p>
     </section>
 
-    <section class="project-features">
-        <h2>Key Features</h2>
+    <!-- Key Features and Components -->
+    <section class="project-section">
+        <h2>Key Features and Components</h2>
         <ul>
-            <li>3D Human Reconstruction using SMPL and EasyMocap</li>
-            <li>Pose Estimation using YOLO v7 for keypoint detection</li>
-            <li>Body Measurements for accurate sizing</li>
-            <li>Integration with NVIDIA Jetson platform for edge computing</li>
-            <li>Clothing simulation with realistic fabric behavior</li>
+            <li>
+                <strong>Pose Estimation & Body Measurements:</strong> 
+                Use of tools like OpenPose and SMPL for detecting body keypoints and generating a 3D human model. Extract accurate 
+                body dimensions such as chest, waist, and inseam from videos.
+            </li>
+            <li>
+                <strong>3D Reconstruction:</strong> Utilize SMPL models for realistic human shape and pose creation. Integrate 
+                EasyMocap for aligning pose estimation data with the SMPL model.
+            </li>
+            <li>
+                <strong>Clothing Simulation:</strong> Simulate fabric behavior (elasticity, flow, fit) using physics-based algorithms.
+            </li>
+            <li>
+                <strong>Embedded Systems:</strong> ESP32 microcontroller is used to connect hardware (camera, sensors) to a mobile app.
+            </li>
+            <li>
+                <strong>Mobile Application:</strong> Developed in Android Studio, offering an intuitive interface for users to 
+                upload videos, view results, and store their profiles securely.
+            </li>
+            <li>
+                <strong>Socket Server and Database:</strong> A server (powered by NVIDIA Jetson Orin Nano) handles the processing 
+                and connects with a lightweight SQLite database for user authentication.
+            </li>
         </ul>
     </section>
 
-    <section class="project-tools">
-        <h2>Tools and Technologies</h2>
-        <p>
-            This project utilized a range of tools and platforms:
-        </p>
+    <!-- Advantages -->
+    <section class="project-section">
+        <h2>Advantages</h2>
         <ul>
-            <li>YOLO v7 for pose estimation</li>
-            <li>SMPL for 3D body modeling</li>
-            <li>NVIDIA Jetson Orin Nano for edge device compatibility</li>
-            <li>MediaPipe for body measurements</li>
-            <li>Python, TensorFlow, and OpenCV for machine learning and image processing</li>
+            <li>Convenience & Safety: Allows customers to virtually try on clothes without removing their physical garments.</li>
+            <li>Increased Conversion Rates: Enhances customer confidence in purchasing decisions, reducing return rates.</li>
+            <li>Pandemic-Proof Shopping: Addresses hygiene and distancing concerns from fitting rooms.</li>
+            <li>Cost Savings for Retailers: Eliminates the need for physical fitting rooms and staff overheads.</li>
         </ul>
     </section>
 
+    <!-- Future Goals -->
+    <section class="project-section">
+        <h2>Future Goals</h2>
+        <ul>
+            <li>Augmented Reality Integration: Enable users to visualize clothes on themselves in real-time via smartphone cameras.</li>
+            <li>Enhanced Simulation: Incorporate dynamic animations and fabric-specific physics.</li>
+            <li>AI-Powered Recommendations: Provide style and size recommendations based on user preferences.</li>
+        </ul>
+    </section>
+
+    <!-- Workflow Chart -->
+    <section class="project-section">
+        <h2>System Workflow</h2>
+        <p>The virtual fitting room operates with the following workflow:</p>
+        <ol>
+            <li>User Interaction: Upload a video or scan themselves using a mobile app.</li>
+            <li>Data Processing: Pose estimation detects body landmarks, and body measurements are extracted for 3D modeling.</li>
+            <li>Clothing Simulation: The chosen clothing is overlaid onto the 3D model, simulating fit and fabric behavior.</li>
+            <li>Preview and Feedback: Users view a 360-degree model and receive recommendations for adjustments or alternative fits.</li>
+        </ol>
+        <p><strong>Workflow Chart:</strong> Input Video → Pose Estimation → 3D Reconstruction → Clothing Overlay → User Preview</p>
+    </section>
+
+    <!-- Hardware & Software Stack -->
+    <section class="project-section">
+        <h2>Hardware & Software Stack</h2>
+        <h3>Hardware:</h3>
+        <ul>
+            <li>Camera or smartphone for video capture.</li>
+            <li>ESP32 microcontroller for embedded systems.</li>
+            <li>NVIDIA Jetson Orin Nano for server processing.</li>
+        </ul>
+        <h3>Software:</h3>
+        <ul>
+            <li>OpenPose, SMPL for pose estimation and 3D modeling.</li>
+            <li>Android Studio for mobile application development.</li>
+            <li>SQLite for secure database storage.</li>
+        </ul>
+    </section>
+
+    <!-- Video Presentation -->
     <section class="project-video">
         <h2>Project Video Presentation</h2>
-        <video controls width="100%">
+        <video controls>
             <source src="static/videos/virtual-fitting-room.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
     </section>
 
+    <!-- Footer -->
     <footer class="project-footer">
-        <p>© 2024 Mahmoud Mohamed</p>
+        <p>&copy; 2024 Mahmoud Mohamed</p>
     </footer>
 </body>
 </html>
