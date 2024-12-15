@@ -364,28 +364,105 @@ a:hover {
     filter: invert(70%) sepia(10%) saturate(300%) hue-rotate(200deg); /* Slight color tint on hover */
 }
 
+/* Test Results Gallery */
 .test-results-gallery {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
     justify-content: center;
     margin-top: 20px;
+    padding: 10px;
 }
 
 .test-image {
     text-align: center;
     max-width: 300px;
+    margin: 10px;
 }
 
 .test-image img {
     width: 100%;
     height: auto;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.test-image img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
 .test-image p {
     margin-top: 10px;
     font-size: 14px;
-    color: #555;
+    color: #b0b0b0; /* Adjusted to fit the dark theme */
+    line-height: 1.5;
+    text-align: center;
+}
+
+/* Adjust Project Details Section */
+.project-details-section {
+    padding: 40px 20px;
+    background: #282828;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    color: #e0e0e0;
+}
+
+.project-details-section h1, 
+.project-details-section h3 {
+    color: #00d4ff;
+}
+
+.project-details-section p {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #b0b0b0;
+}
+
+.project-details-section ul {
+    padding-left: 1.5rem;
+    list-style-type: disc;
+}
+
+.project-details-section ul li {
+    color: #b0b0b0;
+    margin-bottom: 0.5rem;
+}
+
+/* Buttons */
+.project-links .button {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-right: 10px;
+}
+
+.project-links .button.primary {
+    background: #00d4ff;
+    color: #121212;
+    border: none;
+}
+
+.project-links .button.primary:hover {
+    background: #006d99;
+    transform: translateY(-2px);
+}
+
+.project-links .button.secondary {
+    background: transparent;
+    border: 2px solid #00d4ff;
+    color: #00d4ff;
+}
+
+.project-links .button.secondary:hover {
+    background: #00d4ff;
+    color: #121212;
+    transform: translateY(-2px);
 }
