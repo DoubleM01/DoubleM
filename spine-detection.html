@@ -4,70 +4,112 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Detection of Spine Deformities</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="static/css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 </head>
 <body>
-    <!-- Header -->
-    <header class="project-header">
-        <h1>Detection of Spine Deformities</h1>
+    <!-- Header Section -->
+    <header>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
     </header>
 
-    <!-- Main Content -->
-    <main class="project-content">
-        <!-- Description Section -->
-        <section class="project-description">
-            <h2>Project Overview</h2>
+    <!-- Project Details Section -->
+    <section id="project-details" class="project-details-section">
+        <div class="container">
+            <h1>Detection of Spine Deformities</h1>
+            <img src="static/images/spine-detection.jpg" alt="Detection of Spine Deformities" class="project-image">
+            
+            <!-- Description -->
             <p>
-                This project focuses on leveraging deep learning models to analyze lumbar spine MRI images. 
-                The goal is to detect abnormalities such as disc herniation by localizing vertebrae, segmenting 
-                them, and analyzing intervertebral disc spacing. The system incorporates advanced image processing 
-                and machine learning techniques, including YOLO for vertebrae localization and TensorFlow for 
-                segmentation tasks.
+                <strong>Description:</strong><br>
+                This project presents a deep learning-based system for detecting and diagnosing lumbar spine deformities using medical imaging data. By focusing on vertebra localization and disc segmentation, the model improves diagnostic accuracy and efficiency in spine analysis.
             </p>
-        </section>
+            
+            <!-- Objectives -->
+            <p>
+                <strong>Objective:</strong><br>
+                To implement a system that accurately localizes lumbar vertebrae and identifies abnormalities through advanced imaging and machine learning techniques.
+            </p>
 
-        <!-- Features Section -->
-        <section class="project-features">
-            <h2>Key Features</h2>
+            <!-- Methodology -->
+            <h3>Methodology</h3>
             <ul>
-                <li>Localization of lumbar spine vertebrae (L1-L5).</li>
-                <li>Segmentation and analysis of intervertebral discs.</li>
-                <li>Detection of abnormalities like disc herniation.</li>
-                <li>Integration with Roboflow API for dataset processing.</li>
-                <li>Utilization of YOLO for high-accuracy object detection.</li>
+                <li>Developed an image processing algorithm using HSV color space to segment vertebrae and detect intervertebral disc distances.</li>
+                <li>Combined edge detection and deep learning models, leveraging YOLO and MONAI for vertebra localization and segmentation.</li>
+                <li>Integrated visualization tools to annotate detected vertebrae and compute diagnostic metrics.</li>
             </ul>
-        </section>
 
-        <!-- Tools Section -->
-        <section class="project-tools">
-            <h2>Tools and Technologies</h2>
+            <!-- Test Results Section -->
+            <h3>Test Results</h3>
+            <p>
+                The following images demonstrate the results of the model’s performance during testing, including vertebra detection, segmentation, and abnormality classification:
+            </p>
+
+            <!-- Test Images Gallery -->
+            <div class="test-results-gallery">
+                <div class="test-image">
+                    <img src="static/images/test-spine1.jpg" alt="Test Result 1">
+                    <p>Figure 1: Vertebra Localization and Segmentation</p>
+                </div>
+                <div class="test-image">
+                    <img src="static/images/test-spine2.jpg" alt="Test Result 2">
+                    <p>Figure 2: Overlay of Detected Vertebrae and Disc Segmentation</p>
+                </div>
+                <div class="test-image">
+                    <img src="static/images/test-spine3.jpg" alt="Test Result 3">
+                    <p>Figure 3: Abnormality Classification with Highlighted Regions</p>
+                </div>
+            </div>
+
+            <!-- Technologies Used -->
+            <h3>Technologies Used</h3>
             <ul>
-                <li>YOLO v7 for pose estimation key points detection.</li>
-                <li>TensorFlow for deep learning models.</li>
-                <li>Roboflow for image preprocessing and annotation.</li>
-                <li>OpenCV for image processing tasks.</li>
+                <li>Python</li>
+                <li>TensorFlow & MONAI</li>
+                <li>OpenCV</li>
+                <li>NumPy, Pandas</li>
+                <li>Roboflow API</li>
             </ul>
-        </section>
 
-        <!-- Video Section -->
-        <section class="project-video">
-            <h2>Presentation</h2>
-            <video controls>
-                <source src="static/videos/spine_deformities_presentation.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-        </section>
+            <!-- Repository Details -->
+            <h3>Repository Details</h3>
+            <p>
+                <strong>GitHub Repository:</strong><br>
+                <a href="https://github.com/DoubleM01/Detection-of-spine-deformities-using-deep-learning-models" target="_blank">
+                    View Code on GitHub
+                </a>
+            </p>
 
-        <!-- Back to Projects -->
-        <div class="back-to-projects">
-            <a href="index.html" class="button">Back to Projects</a>
+            <div class="project-links">
+                <a href="https://github.com/DoubleM01/Detection-of-spine-deformities-using-deep-learning-models" target="_blank" class="button primary">View Code</a>
+                <a href="static/papers/Detection-of-Spine-Deformities.pdf" target="_blank" class="button secondary">Read Full Dissertation</a>
+            </div>
         </div>
-    </main>
+    </section>
 
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2024 Mahmoud Mohamed. All rights reserved.</p>
+    <!-- Footer Section -->
+    <footer class="footer-section">
+        <p>© 2024 Mahmoud Mohamed | All rights reserved.</p>
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/doublem70" target="_blank" title="LinkedIn">
+                <img src="static/icons/linkedin.png" alt="LinkedIn Logo" class="social-icon">
+            </a>
+            <a href="https://github.com/DoubleM01" target="_blank" title="GitHub">
+                <img src="static/icons/github.png" alt="GitHub Logo" class="social-icon">
+            </a>
+        </div>
     </footer>
+
+    <script>
+        AOS.init({
+            duration: 1200,
+            once: true
+        });
+    </script>
 </body>
 </html>
