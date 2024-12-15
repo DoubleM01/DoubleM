@@ -364,3 +364,28 @@ a:hover {
     filter: invert(70%) sepia(10%) saturate(300%) hue-rotate(200deg); /* Slight color tint on hover */
 }
 
+.test-results-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.test-image {
+    text-align: center;
+    max-width: 300px;
+}
+
+.test-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.test-image p {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #555;
+}
