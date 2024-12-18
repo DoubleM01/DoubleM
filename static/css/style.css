@@ -152,7 +152,7 @@ a:hover {
     flex: 1; /* Take up half the available space */
     display: flex;
     justify-content: flex-end; /* Align image to the right */
-    margin: 0px -20px 0px 0px
+    margin: 0
     
 }
 
