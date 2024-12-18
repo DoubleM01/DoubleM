@@ -162,6 +162,7 @@ a:hover {
     object-fit: contain; /* Ensure proper scaling */
     border-radius: 10px; /* Add rounded corners */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+   margin:-20px -20px 0px 0px
 }
 
 /* Responsive Adjustments */
