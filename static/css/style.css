@@ -532,12 +532,16 @@ a:hover {
             color: #555;
         }
  .skills-section {
+    background: #282828;
             display: flex;
             flex-wrap: wrap;
             gap: 16px;
             padding: 16px;
              margin: 20px, 0px, 0px, 0px
         }
+ .skills-section h4 {
+     
+ }
         .skill {
             flex: 1 1 calc(33.333% - 32px);
             background-color: #1e1e1e;
@@ -555,5 +559,5 @@ a:hover {
         .skill h4 {
             font-size: 1.2rem;
             margin-bottom: 8px;
-            color: #535353;
+            color: #4ee1ff;
         }
