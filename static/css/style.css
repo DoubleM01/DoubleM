@@ -151,7 +151,7 @@ a:hover {
 .hero-image {
     flex: 1; /* Take up half the available space */
     display: flex;
-    justify-content: flex-end; /* Align image to the right */
+    justify-content: flex-start; /* Align image to the right */
     margin: 0
     
 }
