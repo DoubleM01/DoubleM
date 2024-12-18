@@ -467,8 +467,8 @@ a:hover {
     transform: translateY(-2px);
 }
   .certificate-gallery {
-            display: flex;
-            overflow-x: auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 16px;
             padding: 16px;
         }
@@ -478,19 +478,20 @@ a:hover {
             overflow: hidden;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s, box-shadow 0.3s;
-            flex: 0 0 auto;
-            max-width: 300px;
+            background-color: #fff;
+            text-align: center;
+            padding: 12px;
         }
         .certificate img {
             width: 100%;
             height: auto;
             display: block;
+            border-bottom: 1px solid #ccc;
+            margin-bottom: 8px;
         }
         .certificate p {
-            text-align: center;
-            padding: 8px;
             font-size: 1rem;
-            font-weight: bold;
+            margin: 0;
         }
         .certificate:hover {
             transform: scale(1.05);
@@ -535,6 +536,7 @@ a:hover {
             flex-wrap: wrap;
             gap: 16px;
             padding: 16px;
+             margin: 20px, 0px, 0px, 0px
         }
         .skill {
             flex: 1 1 calc(33.333% - 32px);
