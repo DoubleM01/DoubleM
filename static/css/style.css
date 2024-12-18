@@ -468,9 +468,9 @@ a:hover {
 }
   .certificate-gallery {
             display: flex;
-            flex-wrap: wrap;
+            overflow-x: auto;
             gap: 16px;
-            justify-content: center;
+            padding: 16px;
         }
         .certificate {
             border: 1px solid #ccc;
@@ -478,6 +478,7 @@ a:hover {
             overflow: hidden;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s, box-shadow 0.3s;
+            flex: 0 0 auto;
             max-width: 300px;
         }
         .certificate img {
