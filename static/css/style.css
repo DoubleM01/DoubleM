@@ -13,7 +13,8 @@
             text-align: center;
             margin-bottom: 40px;
             font-size: 2rem;
-            color: #333;
+            font-family: 'Poppins', sans-serif;
+    color: #00d4ff; /* Neon blue highlight */
         }
 
         nav ul {
@@ -190,6 +191,8 @@ a:hover {
 }
 
 .projects-section h2 {
+ font-family: 'Poppins', sans-serif;
+    color: #00d4ff; /* Neon blue highlight */
     font-size: 2rem;
     text-align: center;
     margin-bottom: 2rem;
@@ -273,6 +276,8 @@ a:hover {
     margin-bottom: 1rem;
     border-bottom: 2px solid #00d4ff;
     padding-bottom: 0.5rem;
+ font-family: 'Poppins', sans-serif;
+    color: #00d4ff; /* Neon blue highlight */
 }
 
 /* List Styling */
@@ -332,6 +337,8 @@ a:hover {
 .contact-section h2 {
     font-size: 2rem;
     margin-bottom: 1rem;
+ font-family: 'Poppins', sans-serif;
+    color: #00d4ff; /* Neon blue highlight */
 }
 
 .contact-form {
