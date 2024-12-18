@@ -496,3 +496,36 @@ a:hover {
             transform: scale(1.05);
             box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
         }
+
+ .experience-gallery {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+        .experience {
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            padding: 16px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            background-color: #f9f9f9;
+        }
+        .experience:hover {
+            transform: scale(1.02);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+        }
+        .experience h3 {
+            font-size: 1.5rem;
+            margin-bottom: 8px;
+        }
+        .experience p {
+            margin: 0;
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+        .experience span {
+            display: block;
+            margin-top: 8px;
+            font-size: 0.9rem;
+            color: #555;
+        }
