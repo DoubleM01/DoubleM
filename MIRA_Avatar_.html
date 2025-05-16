@@ -1,0 +1,93 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MIRA Virtual Avatar</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="static/css/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <h1>MIRA Virtual Avatar</h1>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Project Details Section -->
+    <section class="section">
+        <h2>About the Project</h2>
+        <p>
+            The **MIRA Virtual Avatar** project is a comprehensive system for generating realistic text-to-speech (TTS), emotion-based avatars, and synchronized video outputs. It integrates multiple services to create a seamless pipeline for generating expressive avatars with synchronized audio and video.
+        </p>
+        <p><strong>Author:</strong> Mahmoud Mohamed</p>
+    </section>
+
+    <section class="section">
+        <h2>Key Features</h2>
+        <p>The project offers the following key features:</p>
+        <ul>
+            <li>**Text-to-Speech (TTS):** Generate realistic speech from text using advanced TTS models.</li>
+            <li>**Emotion-Based Avatars:** Create avatars that reflect specific emotions based on input parameters.</li>
+            <li>**Video Generation:** Produce synchronized video outputs with audio and avatar animations.</li>
+            <li>**Customizable Pipelines:** Modular design for integrating additional features or models.</li>
+        </ul>
+    </section>
+
+    <section class="section">
+        <h2>Technical Approach</h2>
+        <p>The project is structured into the following components:</p>
+        <ul>
+            <li>**TTS Service:** Utilizes advanced text-to-speech models to convert text input into realistic audio.</li>
+            <li>**SadTalker Integration:** Leverages SadTalker for emotion-based avatar generation, allowing avatars to express specific emotions.</li>
+            <li>**Synchronization Pipeline:** Combines audio and avatar animations to produce synchronized video outputs.</li>
+        </ul>
+    </section>
+
+    <section class="section">
+        <h2>Usage</h2>
+        <p>To use the MIRA Virtual Avatar project, follow these steps:</p>
+        <ul>
+            <li>1. Navigate to the project directory.</li>
+            <li>2. Start the GUI local version by running: <code>python main.py</code></li>
+            <li>3. Alternatively, start the Gradio version by running: <code>python app.py</code></li>
+            <li>4. Access the Gradio server for avatar generation at <code>http://127.0.0.1:7860</code>.</li>
+            <li>5. Preview available for both the GUI and Gradio interfaces.</li>
+            <li>6. Generated outputs will be saved as file <code>output/results.mp4</code>.</li>
+        </ul>
+    </section>
+
+    <section class="section">
+        <h2>Results</h2>
+        <p>Example output:</p>
+        <div class="video-container">
+            <video controls width="640" height="360">
+                <source src="https://github.com/user-attachments/assets/7a075ce5-d119-430a-a600-f041ca52f921" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>Acknowledgments</h2>
+        <p>This project leverages the following open-source tools and libraries:</p>
+        <ul>
+            <li><a href="https://github.com/coqui-ai/TTS">TTS</a> for text-to-speech generation.</li>
+            <li><a href="https://github.com/Winfredy/SadTalker">SadTalker</a> for emotion-based avatar generation.</li>
+            <li><a href="https://github.com/TencentARC/GFPGAN">GFPGAN</a> for face enhancement.</li>
+        </ul>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 Mahmoud Mohamed | Designed with ❤️</p>
+    </footer>
+</body>
+</html>
